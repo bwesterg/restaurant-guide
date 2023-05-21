@@ -15,11 +15,16 @@ const options = {
         'X-RapidAPI-Key': '694dad866cmsh70355d483c8cacap112ba1jsn911c31979271',
         'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
     }
-    };
+};
+
+// axios.request(options).then(function (response) {
+//     console.log(response.data);
+// }).catch(function(error) {
+//     console.log(error);
+// });
 
 export const getPlacesData = async () => {
     try {
-        //request
         const { data: { data } } = await axios.get(URL, options);
 
         return data;
